@@ -1,0 +1,322 @@
+body{
+    font-family: Arial, sans-serif;
+   
+    color: black;
+    background-color: whitesmoke;
+    padding: 24px;
+    max-width: 900px;
+    margin: auto;
+}
+
+
+
+header{
+    margin-bottom: 32px;
+    padding-bottom: 20px;
+}
+
+
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav a{
+    display: inline-block;
+    font-weight: bold;
+    padding: 10px 16px;
+    border-radius: 6px;
+    background-color: rgb(118, 109, 109);
+    color: white;
+    text-decoration: none;
+    transition: backgroudcolor 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+    
+}
+
+nav a:hover{
+    background-color: rgh(90, 83, 83);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgb(0, 0, 0, 0.15);
+} 
+
+nav a :focus-visible{
+    outline: 3px solid #222;
+    outline-offset: 3px;
+}
+main{
+    background-color: white;
+    border: 1px solid whitesmoke;
+    border-radius: 12px;
+    padding: 25px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+section h2{
+    color: rgb(118, 109, 109);
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    margin: 0 0 18px;
+    font-size: 25px;
+}
+
+#about p{
+    margin-bottom: 10px;
+}
+
+address{
+    font-style: normal;
+}
+address p{
+    margin: 6px 0;
+}
+
+address a{
+    color: rgb(118, 109, 109);
+    font-weight: bold;
+    transition: color 0.2s ease;   
+}
+
+address a:hover{
+    color: #222;
+}
+
+.stats{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+.stats li{
+    flex: 1 1 220px ;
+    border-left: 5px solid rgb(70, 65, 65);
+    padding: 20px;
+    background-color: rgb(118, 109, 109);
+    color: white;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.stats li :hover{
+    transform: translateY(-3px);
+    box-shadow: 
+    0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.stats span{
+    font-size: 25px;
+}
+
+
+
+
+
+
+table{
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    background-color: white;
+
+}
+
+th, td{
+    border: 1px solid black;
+    padding: 12px;
+    text-align: left;
+}
+
+th{
+    background-color: rgb(118, 109, 109);
+    color: white;
+    font-weight: bold;
+}
+
+tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover{
+    background-color: #f5f5f5;
+}
+
+#book-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 650px;
+}
+
+#book-form label{
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+#book-form input{
+    width: 100%;
+    padding: 11px 12px;
+    margin-bottom: 16px;
+    border: 1px solid;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: 
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+#book-form input:focus{
+    background-color: rgb(90, 83, 83);
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(118, 109, 109);
+}
+
+#book-form button {
+    align-self: flex-start;
+    padding: 11px 24px;
+    background-color: rgb(118, 109, 109);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+#book-form button:hover{
+    background-color: rgb(90, 83, 83);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+#book-form button:focus-visible{
+    outline: 3px solid #222;
+    outline-offset: 3px;
+}
+
+
+#settings{
+    padding-top: 10px;
+}
+
+#settings p{
+    color: rgb(118, 109, 109);
+}
+
+@media(max-width:900px){
+    body{
+        padding: 20px;
+    }
+    main{
+        padding: 26px;
+    }
+    header h1{
+        font-size: 28.8px;
+    }
+}
+
+@media (max-width: 768px){
+    body{
+        padding: 16px;
+    }
+    main{
+        padding: 22px;
+    }
+    header{
+        margin-bottom: 24px;
+    }
+    header h1{
+        font-size: 27.2px;
+
+    }
+    nav ul{
+        gap: 8px
+    }
+    .stats{
+        gap: 14px;
+    }
+    .stats li{
+        flex: 1 1 180px;
+    }
+}
+
+@media (max-width :480px){
+    body{
+        padding: 10px;
+    }
+    header{
+        margin-bottom: 20px;
+    }
+
+    header h1{
+        font-size: 24px;
+    }
+    nav ul{
+        flex-direction:  column;
+        gap: 8px;
+    }
+
+    nav li{
+        width: 100%;
+    }
+    nav a{
+        width: 100%;
+        text-align: center;
+    }
+    main{
+        padding: 18px;
+        border-radius: 8px;
+    }
+    section{
+        margin-bottom: 30px;
+    }
+    section h2{
+        font-size: 19.2px;
+    }
+    .stats{
+        flex-direction: column;
+        gap: 12px;
+    }
+    .stats li{
+        width: 100%;
+    }
+    th, td{
+        padding: 9px;
+        font-size: 14.4px;
+    }
+    #book-form button{
+        width: 100%;
+    }
+}
+
+@media (max-width: 360px){
+    body{
+        padding: 8px;
+    }
+    main{
+        padding: 14px;
+    }
+    header h1 {
+        font-size: 21.6px;
+    }
+    th, td{
+        padding: 7px;
+        font-size: 12.8px;
+    }
+}
