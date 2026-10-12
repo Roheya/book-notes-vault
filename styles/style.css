@@ -31,22 +31,20 @@ nav a{
     padding: 10px 16px;
     border-radius: 6px;
     background-color: rgb(118, 109, 109);
-    color: white;
+    color: black;
     text-decoration: none;
-    transition: backgroudcolor 0.2s ease,
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+    transition: backgroud-color 0.2s ease,transform 0.2s ease,box-shadow 0.2s ease;
 
     
 }
 
 nav a:hover{
-    background-color: rgh(90, 83, 83);
+    background-color: rgb(90, 83, 83);
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgb(0, 0, 0, 0.15);
 } 
 
-nav a :focus-visible{
+nav a:focus-visible{
     outline: 3px solid #222;
     outline-offset: 3px;
 }
@@ -120,10 +118,65 @@ address a:hover{
     font-size: 25px;
 }
 
+.trend-container{
+    margin-top: 20px;
+    padding:  15px;
+    background-color: #f9f9f9;
+    border-radius:  6px;
+    border: 1px solid #ddd;
+
+}
+
+.trend-container h3{
+    margin: 0 0 10px 0;
+    font-size:  16px;
+    color:  rgb(118, 109, 109)
+}
+
+
+.trend-bar{
+    flex: 1;
+    background-color: rgb(118, 109, 109);
+    border-radius: 4px 4px 0 0 ;
+    min-height: 4px;
+    transition: background-color 0.2s ease;
+
+}
+
+.trend-bar:hover{
+    background-color: rgb(90, 83, 83);
+
+}
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height:  1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0 ,0,0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.cap-message{
+    margin-top: 12px;
+    font-weight: bold;
+    color: #333;
+}
 
 
 
 
+#search-input{
+    display: block;
+    margin-bottom:15px;
+    padding:10px 12px;
+    border:  1px solid #ccc;
+    border-radius: 6px;
+    width: 300px;
+}
 
 table{
     width: 100%;
@@ -169,7 +222,7 @@ tbody tr:hover{
     width: 100%;
     padding: 11px 12px;
     margin-bottom: 16px;
-    border: 1px solid;
+    border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 16px;
     transition: 
@@ -211,27 +264,69 @@ tbody tr:hover{
 }
 
 
+
+.edit-btn, .delete-btn{
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.edit-btn{
+    background-color: rgb(118, 109, 109);
+    color: white;
+}
+
+.edit-btn:hover{
+    background-color: rgb(90, 83, 83);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    
+}
+
+.delete-btn{
+    background-color: rgb(118, 109, 109);
+    color: white;
+}
+
+
+.delete-btn:hover{
+     background-color: rgb(90, 83, 83);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+}
+
+
+
 #settings{
     padding-top: 10px;
 }
 
 #settings p{
     color: rgb(118, 109, 109);
+
+    
 }
 
-@media(max-width:900px){
-    body{
-        padding: 20px;
-    }
-    main{
-        padding: 26px;
-    }
-    header h1{
-        font-size: 28.8px;
+@media (min-width:480px){
+    body {
+        padding: 12px;
+        main {
+            padding: 18px;
+        }
+        header h1 {
+            font-size: 24px;
+        }
     }
 }
 
-@media (max-width: 768px){
+
+@media (min-width: 768px){
     body{
         padding: 16px;
     }
@@ -241,82 +336,65 @@ tbody tr:hover{
     header{
         margin-bottom: 24px;
     }
-    header h1{
+    header h1 {
         font-size: 27.2px;
-
     }
-    nav ul{
-        gap: 8px
-    }
-    .stats{
-        gap: 14px;
-    }
-    .stats li{
-        flex: 1 1 180px;
-    }
-}
-
-@media (max-width :480px){
-    body{
-        padding: 10px;
-    }
-    header{
-        margin-bottom: 20px;
-    }
-
-    header h1{
-        font-size: 24px;
-    }
-    nav ul{
-        flex-direction:  column;
-        gap: 8px;
-    }
-
-    nav li{
-        width: 100%;
-    }
-    nav a{
-        width: 100%;
-        text-align: center;
-    }
-    main{
-        padding: 18px;
-        border-radius: 8px;
-    }
-    section{
-        margin-bottom: 30px;
-    }
-    section h2{
-        font-size: 19.2px;
-    }
-    .stats{
-        flex-direction: column;
+    nav ul {
+        flex-direction: row;
         gap: 12px;
     }
-    .stats li{
-        width: 100%;
+    nav li {
+        width: auto;
     }
-    th, td{
+    nav a {
+        width: auto;
+        background: transparent;
+    }
+    .stats {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+    .stats li {
+        flex: 1 1 180px;
+    }
+    #book-form button {
+        width: auto;
+    }
+    th, td {
         padding: 9px;
         font-size: 14.4px;
     }
-    #book-form button{
-        width: 100%;
+}
+
+@media (min-width: 1024px) {
+    body {
+        padding: 24px;
+    }
+    main {
+        padding: 30px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    header h1 {
+        font-size: 32px;
+    }
+    th, td {
+        padding: 12px;
+        font-size: 16px;
     }
 }
 
-@media (max-width: 360px){
-    body{
-        padding: 8px;
-    }
-    main{
-        padding: 14px;
-    }
-    header h1 {
-        font-size: 21.6px;
-    }
-    th, td{
-        padding: 7px;
-        font-size: 12.8px;
-    }
+footer{
+    text-align:  center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #f3f4f6;
+    color: #4b5563;
+    font-size: 0.9rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+footer p{
+    margin:  5px 0;
 }

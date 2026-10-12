@@ -36,23 +36,36 @@
             <ul class="stats">
                 <li>Total Records: <span id="tbooks">0</span></li>
                 <li>Total Pages Read: <span id="tprogress">0</span></li>
+                <li>TOP Category/Tag: <span id = "stat-top-tag">None</span></li>
+                <li>Estimated Time Read: <span id ="t-hours">0</span>hrs</li>
             </ul>
+           <aside class="trend-container">
+            <h3>Last 7 Days Trend </h3>
+            <figure id ="trend-chart" class="trend-chart"></figure>
+           </aside>
+
+           <span id ="cap-live-region" aria-live ="polite" class="sr-only"></span>
+           <p id="cap-display-message" class="cap-message"></p>
         </section>
         <section id="table">
             <h2>Records Table</h2>
+
+            <label for="search-input">Search Vault: </label>
+            <input type="text" id="search-input" placeholder="Filter by title">
             <table>
                 <thead>
                     <tr>
                         <th scope="col">Title</th>
-                        <th scope="col">Author/Category</th>
+                        <th scope="col">Author</th>
                         <th scope="col">Total pages</th>
                         <th scope="col"> Pages Read</th>
                         <th scope="col">Tag</th>
                         <th scope="col">Date Created</th>
+                        <th scope="col">Actions</th>
 
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="tableBody">
 
                 </tbody>
             </table>
@@ -85,6 +98,14 @@
         </section>
 
     </main>
+        
+
+    <footer>
+        <p>&copy; 2026 Book & Notes Vault. All rights reserved.</p>
+        
+    </footer>
+    <script type= "module" src="./scripts/main.js"></script>
+
 </body>
 
 </html>
