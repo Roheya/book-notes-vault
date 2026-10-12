@@ -1,0 +1,119 @@
+[
+    {
+       "id": "rec_0001",
+       "title": "python",
+        "author":"Mina",
+        "pages": 63,
+        "read": 40,
+        "tag": "Academic",
+        "createdAt":"2026-09-10T10:00:00.000Z",
+        "updatedAt":"2026-09-10T10:00:00.000Z"
+        
+    },
+    {
+       "id": "rec_0002",
+       "title": "High school musical",
+        "author":"James",
+        "pages": 80,
+        "read": 70,
+        "tag": "School",
+        "createdAt":"2026-09-13T10:00:00.000Z",
+        "updatedAt":"2026-09-13T10:00:00.000Z"
+        
+    },
+    {
+       "id": "rec_0003",
+       "title": "Novela",
+        "author":"Robert",
+        "pages": 78,
+        "read": 60,
+        "tag": "Romance",
+        "createdAt":"2026-09-15T10:00:00.000Z",
+        "updatedAt":"2026-09-15T10:00:00.000Z"
+        
+    },
+    {
+       "id": "rec_0004",
+       "title": "Python",
+        "author":"Eric",
+        "pages": 89,
+        "read": 80,
+        "tag": "Programming",
+        "createdAt":"2026-09-18T10:00:00.000Z",
+        "updatedAt":"2026-09-18T10:00:00.000Z"
+        
+    },
+    {
+       "id": "rec_0005",
+       "title": "Crazy for you",
+        "author":"Kath",
+        "pages": 68,
+        "read": 50,
+        "tag": "Romance",
+        "createdAt":"2026-09-20T10:00:00.000Z",
+        "updatedAt":"2026-09-20T10:00:00.000Z"
+        
+    },
+    
+    {
+       "id": "rec_0006",
+       "title": "Python crash course",
+        "author":"Matthes Peter",
+        "pages": 544,
+        "read": 100,
+        "tag": "Academic",
+        "createdAt":"2026-09-22T10:00:00.000Z",
+        "updatedAt":"2026-09-22T10:00:00.000Z"
+        
+    },
+    
+    {
+       "id": "rec_0007",
+       "title": "Ypu Don't Know js: scope & Closures",
+        "author":"Kyle Simpson",
+        "pages": 98,
+        "read": 98,
+        "tag": "Academic",
+        "createdAt":"2026-09-25T12:00:00.000Z",
+        "updatedAt":"2026-09-25T12:00:00.000Z"
+        
+    },
+    
+    {
+       "id": "rec_0008",
+       "title": "Intr to Algorithim",
+        "author":"Thomas H. Cormen",
+        "pages": 135,
+        "read": 100,
+        "tag": "computer science",
+        "createdAt":"2026-09-28T113:00:00.000Z",
+        "updatedAt":"2026-09-28T13:00:00.000Z"
+        
+    },
+    
+    {
+       "id": "rec_0009",
+       "title": "The pragmatic Programmer",
+        "author":"Andrew",
+        "pages": 300,
+        "read": 300,
+        "tag": "career",
+        "createdAt":"2026-09-01T15:00:00.000Z",
+        "updatedAt":"2026-09-01T15:00:00.000Z"
+        
+    },
+    
+    {
+       "id": "rec_0010",
+       "title": "Data structure and Notes",
+        "author":"Mina",
+        "pages": 63,
+        "read": 40,
+        "tag": "Notes",
+        "createdAt":"2026-10-10T18:00:00.000Z",
+        "updatedAt":"2026-10-10T18:00:00.000Z"
+        
+    }
+    
+    
+]
