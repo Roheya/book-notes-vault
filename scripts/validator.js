@@ -24,7 +24,7 @@ export function validateFormInput(data){
     if(!data.tag || !tagRegx.test(data.tag)){
         return "Tag/Category can only contain letters, spaces, and hyphens."
     }
-    const dRegex = /\b(\w+)\s+\1\b/i
+    const dRegex = /\b(\w+)\s+\1\b/
     if(dRegex.test(data.title)){
         return "Title contains accidental duplicate words"
     }
