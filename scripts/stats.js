@@ -1,7 +1,7 @@
 export function calculateDashboardStats(books, pageCap =500){
-    const totalRecords = books.length
-    const totalPagesRead = books.reduce((sum, book)=>sum + Number(book.read || 0), 0)
-    const estimatedHours = (totalPagesRead/30).toFixed(1)
+    const totalRecords = books.length;
+    const totalPagesRead = books.reduce((sum, book)=>sum + Number(book.read || 0), 0);
+    const estimatedHours = (totalPagesRead/30).toFixed(1);
     const tagCounts = {}
     books.forEach(book =>{
         if(book.tag){
@@ -10,8 +10,8 @@ export function calculateDashboardStats(books, pageCap =500){
         }
         
     });
-    let topCategory="None"
-    let maxCount = 0
+    let topCategory="None";
+    let maxCount = 0;
     for (const[tag, count] of Object.entries(tagCounts)){
         if (count > maxCount){
             maxCount= count
