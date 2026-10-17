@@ -14,6 +14,7 @@ function generateUniqueId(){
     }, 0)
     return `rec_${String(highestNum + 1).padStart(4, '0') }`
 }
+
 export function record(formdata){
     const now = new Date().toISOString();
     return {
