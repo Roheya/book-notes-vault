@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family:  system-ui, -apple-system,   sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: black;
+            background: #f9fafb;
+        }
+        h1{
+            color: #111827;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 12px;
+        }
+
+        .test-card{
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+        ul{
+            padding-left: 20px;
+            list-style-type: none;
+        }
+        li{
+            padding: 8px 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        li:last-child{
+            border-bottom: none;
+        }
+        .pass{
+            color: #059669;
+            font-weight: bold;
+            background: #ecfdf5;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-right: 8px;
+        }
+        .fail{
+            color: #dc2626;
+            font-weight: bold;
+            background: #fef2f2;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Milestone 3: Automated Assertion Suite</h1>
+        <p>This page runs automated assertion validating core regex rules and search compilation handlers for the Book & Notes Vault.</p>
+        <div class="test-card">
+            <h2>Assertion Results</h2>
+            <ul id="test-results"></ul>
+        </div>
+
+        
+    </main>
+
+    <script type="module">
+        import{validateFormInput} from './scripts/validator.js'
+        import {compileRegex} from './scripts/search.js'
+
+        const resultsList = document.getElementById('test-results')
+
+        function assert(condition, testName){
+            const li = document.createElement('li')
+            if (condition){
+                li.innerHTML = `<span class ="pass">PASSED</span> ${testName}`
+            }else{
+                li.innerHTML = `<span class = "fail">FAILED</span> ${testName}`
+            }
+            resultsList.appendChild(li)
+        }
+
+        const validRegex= compileRegex('python', 'i')
+        assert(validRegex instanceof RegExp && validRegex.test('Python Programming'), 'compileRegex successfully compiles valid expression')
+
+        const invalidRegex = compileRegex('[unclosed-bracket', 'i')
+        assert(invalidRegex===null, 'compileRegex safely catches malformed regex without crashing')
+
+
+        const validSample ={
+            title: 'Clean Code',
+            author: 'Robert Maartin',
+            pages:'464',
+            read:'200',
+            tag:'programming',
+            date:'2026-09-10'
+        }
+
+        assert(validateFormInput(validSample)=== null, 'validateFormInput accepts a completely valid record')
+        const emptyTitleSample ={...validSample, title:'   '}
+        assert(typeof validateFormInput(emptyTitleSample) === 'string', 'validateFormInput rejects whitespace-only titles')
+
+
+        const invalidPageSample ={...validSample, pages: '-50'}
+        assert(typeof validateFormInput(invalidPageSample) ==='string', 'validateFormInput rejects negative page numbers')
+
+        const invalidDateSample={...validSample, date:'2026/09/10'}
+        assert(typeof validateFormInput(invalidDateSample)=== 'string', 'validateFormInput enforces ISO YYYY-MM-DD date format')
+    </script>
+</body>
+</html>
