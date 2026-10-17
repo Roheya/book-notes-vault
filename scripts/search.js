@@ -1,3 +1,13 @@
+export function compileRegex(query, flags=''){
+    try{
+        if (!query) return null
+        return new RegExp(query, flags)
+    }catch (e){
+        return null
+    }
+}
+
+
 export function sortRecords(records, field, ascending){
     return [...records].sort((a, b) =>{
         let valueA = a[field]
